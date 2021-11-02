@@ -20,7 +20,9 @@ export const AlbumList = () => {
           {/* to be able to add this slash preview we had to make the img thingie
           a template literal... */}
           <img src={`${album.strAlbumThumb}/preview`} alt={album.strAlbum} />
-          <h2>{album.strAlbum}</h2>
+          <h2>
+            <Link to={`/albums/${album.idAlbum}`}>{album.strAlbum}</Link>
+          </h2>
           <h3>{album.strArtist}</h3>
         </div>
       ))}
